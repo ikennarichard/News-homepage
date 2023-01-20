@@ -10,15 +10,17 @@
 </head>
 <body>
   <div class="wrapper">
+    <div class="left_layer"></div>
     <header>
-
       <!-- logo -->
       <img src="./assets/images/logo.svg" alt="product logo" class="logo">
 
-      <img src="./assets/images/icon-menu.svg" alt="hamburger icon" class="hamburger_icon">
+     <div class="hamburger_icon">
+     </div>
 
       <!-- nav list -->
-    <nav>
+      
+        <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html">New</a></li>
@@ -36,8 +38,12 @@
     <main>
       <!-- top  -->
       <div class="top">
-        <img src="./assets/images/image-web-3-mobile.jpg" alt="">
-
+        <div class="hero_image">
+        <picture>
+          <source media="(min-width:1000px)" srcset="./assets/images/image-web-3-desktop.jpg">
+          <img src="./assets/images/image-web-3-mobile.jpg" alt="">
+        </picture>
+      </div>
         <h1 class="heading">The Bright Future of Web 3.0?</h1>
         <p>  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
 
@@ -50,39 +56,47 @@
 
         <div class="articles hydrogen">
           <h3>Hydrogen VS Electric Cars</h3>
-          <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+          <small>Will hydrogen-fueled cars ever catch up to EVs?</small>
         </div>
         <div class="articles downsides">
           <h3>The Downsides of AI Artistry</h3>
-          <p>What are the possible adverse effects of on-demand AI image generation?</p>
+          <small>What are the possible adverse effects of on-demand AI image generation?</small>
         </div>
         <div class="articles funding">
           <h3>Is VC Funding Drying Up?</h3>
-          <p>Private funding by VC firms is down 50% YOY. We take a look at what that means</p>
+          <small>Private funding by VC firms is down 50% YOY. We take a look at what that means</small>
         </div>
       </div>
 
       <!-- botttom -->
       <div class="bottom">
-        <!-- images -->
-        <img src="./assets/images/image-retro-pcs.jpg" alt=" a retro pc" class="retro">
-        <img src="./assets/images/image-top-laptops.jpg" alt="key pads with neon lights" class="laptops">
-        <img src="./assets/images/image-gaming-growth.jpg" alt=" a retro pc" class="gaming">
         <!-- topics -->
         <div class="first">
-          <b>01</b>
-          <h4>Reviving Retro PCs</h4>
-          <p>What happens when old PCs are given modern updrades?</p>
+          <img src="./assets/images/image-retro-pcs.jpg" alt=" a retro pc" class="retro">
+          <div>
+            <b>01</b>
+            <h4>Reviving Retro PCs</h4>
+            <small>What happens when old PCs are given modern updrades?</small>
+          </div>
+          <!-- second -->
         </div>
         <div class="second">
-          <b>02</b>
+          <img src="./assets/images/image-top-laptops.jpg" alt="key pads with neon lights" class="laptops">
+          <div>
+            <b>02</b>
           <h4>Top 10 Laptops of 2022</h4>
-          <p>Our best picks for various needs and budgets.</p>
+          <small>Our best picks for various needs and budgets.</small>
+          </div>
+          
+          <!-- third -->
         </div>
         <div class="third">
+          <img src="./assets/images/image-gaming-growth.jpg" alt=" a retro pc" class="gaming">
+          <div>
           <b>03</b>
           <h4>The Growth of Gaming</h4>
-          <p>How the pandemic has sparked fresh opportuninties</p>
+          <small>How the pandemic has sparked fresh opportuninties</small>
+        </div>
         </div>
       </div>
     

@@ -39,9 +39,10 @@ img {
 
 
 div.wrapper {
+    position: relative;
     padding: 1em;
     margin: 2px 0;
-    width: 370px;
+    max-width: 600px;
     border: 1px solid;
     display: grid;
     gap: 24px;
@@ -49,6 +50,7 @@ div.wrapper {
 
 
 header {
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -61,43 +63,201 @@ header {
 }
 
 
+.hamburger_icon {
+    z-index: 2;
+    width: 30px;
+    height: 50px;
+    cursor: pointer;
+    background: url(./assets/images/icon-menu.svg) no-repeat center;
+}
+
+
+.close {
+    background: url(./assets/images/icon-menu-close.svg) no-repeat center;
+    /* transition: 0.5s ease-in-out; */
+}
+
+
+.left_layer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    height: 100%;
+    width: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: width .5s ease-in-out;
+}
+
+.show_layer {
+    width: 35%;
+}
+
+
 nav {
-    display: none;
-    position: fixed;
+    padding-block-start: 8em;
+    background-color: var(--off-white);
+    height: 100%;
+    width: 0;
+    z-index: 1;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    transition: width .5s ease-in-out;
+}
+
+
+nav > ul {
+    list-style: none;
+    
+}
+
+nav > ul > li {
+    margin-block-end: 1em;
+    margin-inline-start: -1em;
+}
+
+
+nav > ul > li > a {
+    text-decoration: none;
+    color: dark var(--dark-grayish-blue);
+}
+
+
+.show_nav {
+    width: 65%;
+}
+
+
+main {
+    position: relative;
+}
+
+
+.top > a {
+    text-decoration: none;
+    background-color: var(--soft-red);
+    color: var(--off-white);
+    padding: .8em 1.5em;
+    letter-spacing: 1.5px;
+    font-size: .7rem;
+    display: inline-block;
+    margin-block-start: 1.5em;
+    width: 12em;
+    text-align: center;
+}
+
+
+.center {
+    margin-block-start: 3em;
+    display: grid;
+    gap: 15px;
+    background-color: var(--very-dark-blue);
+    padding: 1em 1em;
+}
+
+
+.center > h2 {
+    color: var(--soft-orange);
+}
+
+.center > div {
+    border-bottom: 1px solid;
+    padding-block-end: 1.2em;
+    color: var(--off-white);
+}
+
+
+.center > div:nth-child(4) {
+    border: none;
+}
+
+
+.center > div > small {
+    color: var(--grayish-blue);
 }
 
 
 .bottom {
-    display: grid;
-    grid-template-columns: 100px 190px;
-    grid-template-areas: 
-    "retro first"
-    "laptops second"
-    "gaming third";
-    margin-block-start: 1em;
-    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-block-start: 2em;
+    gap: 25px;
 }
 
-.retro {
-    grid-area: retro;
+
+.bottom > div {
+    display: flex;
+    flex: 0 1 auto;
+    gap: 17px;
 }
 
-.laptops {
-    grid-area: laptops;
+.bottom > div > img {
+    width: 100px
 }
 
-.gaming {
-    grid-area: gaming;
+
+.bottom > div > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* flex: 1 1 auto; */
 }
 
-.first {
-    grid-area: first;
+
+.bottom > div > div > b {
+    color: var(--grayish-blue);
+    font-size: 1.7rem;
+    margin-top: -3px;
 }
 
-.seocnd {
-    grid-area: second;
+
+.bottom > div > div > h4 {
+    color: dark var(--dark-grayish-blue);
 }
 
-.third {
-    grid-area: third;
+
+.bottom > div > div > small {
+    color: var(--grayish-blue);
+}
+
+
+@media (min-width: 1000px) {
+    div.wrapper {
+        padding: 1em;
+        margin: 2px 0;
+        max-width: 992px;
+        border: 1px solid;
+        display: grid;
+        gap: 24px;
+    }
+
+
+    .hero_image {
+        width: 700px;
+    }
+
+    .hamburger_icon {
+        display: none;
+    }
+
+
+    nav {
+        width: fit-content;
+        position: relative;
+        background: none;
+        padding: 0;
+        display: flex;
+        height: fit-content;
+        padding-block-start: 2em;
+    }
+
+
+    nav ul {
+        display: flex;
+        gap: 2em;
+        justify-content: flex-end;
+    }
 }
