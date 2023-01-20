@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'Inter Variable Font';
+    src: url(./assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+
+:root {
+    --soft-orange: hsl(35, 77%, 62%);
+    --soft-red: hsl(5, 85%, 63%);
+    --off-white: hsl(36, 100%, 99%);--grayish-blue: hsl(233, 8%, 79%);
+    --dark-grayish-blue: hsl(236, 13%, 42%);
+    --very-dark-blue: hsl(240, 100%, 5%);
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    line-height: 1.5;
+    font-family: 'Inter Variable Font', sans-serif;
+}
+
+
+p {
+    font-size: 0.938rem;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+
+div.wrapper {
+    padding: 1em;
+    margin: 2px 0;
+    width: 370px;
+    border: 1px solid;
+    display: grid;
+    gap: 24px;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ 
+}
+
+
+.logo {
+    height: 1.8em;
+}
+
+
+nav {
+    display: none;
+    position: fixed;
+}
+
+
+.bottom {
+    display: grid;
+    grid-template-columns: 100px 190px;
+    grid-template-areas: 
+    "retro first"
+    "laptops second"
+    "gaming third";
+    margin-block-start: 1em;
+    gap: 20px;
+}
+
+.retro {
+    grid-area: retro;
+}
+
+.laptops {
+    grid-area: laptops;
+}
+
+.gaming {
+    grid-area: gaming;
+}
+
+.first {
+    grid-area: first;
+}
+
+.seocnd {
+    grid-area: second;
+}
+
+.third {
+    grid-area: third;
+}
