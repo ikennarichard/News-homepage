@@ -37,9 +37,9 @@ img {
 h1 {
     color: var(--very-dark-blue);
     background-image: var(--text-gradient);
-    background-clip: text;
     -moz-background-clip: text;
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
 }
 
