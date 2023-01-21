@@ -10,3 +10,11 @@ menu.addEventListener('click', (e) => {
     nav.classList.toggle('show_nav');
     leftLayer.classList.toggle('show_layer')
 })
+
+
+nav.addEventListener('click', (e) => {
+    menu.classList.toggle('close');
+
+    e.target.classList.toggle('show_nav');
+    leftLayer.classList.toggle('show_layer')
+})
